@@ -1,0 +1,13 @@
+Document Template Testing
+=========================
+
+1. Developed sampleScript.py in C:\sphinxTests.
+2. Used DOS Command Prompt to run Sphinx-quickstart in the directory.
+3. Edited the index.rst and made the following changes:
+    -Added:
+        .. automodule:: rainbowsUnicorns
+            :members:
+
+4. Opened the conf.py and uncommented:
+    sys.path.insert(0, os.path.abspath('.'))
+5. Having a happy day.

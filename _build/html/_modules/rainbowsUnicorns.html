@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>rainbowsUnicorns &mdash; Sample Script 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Sample Script 1.0 documentation" href="../index.html" />
+    <link rel="up" title="Module code" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sample Script 1.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for rainbowsUnicorns</h1><div class="highlight"><pre>
+<span class="c">#!/usr/bin/env python</span>
+<span class="c"># encoding:UTF-8</span>
+<span class="c"># rainbowsUnicorns.py</span>
+<span class="sd">r&quot;&quot;&quot;</span>
+<span class="sd">    Summary</span>
+<span class="sd">    =======</span>
+<span class="sd">    This python module does some amazing things.</span>
+
+<span class="sd">    The primary job of the module is to spawn unicorns and rainbows.</span>
+
+<span class="sd">    The *main* function is the primary controlling function</span>
+<span class="sd">    for this module. All other functions are called from it.</span>
+
+<span class="sd">    Use</span>
+<span class="sd">    ===</span>
+<span class="sd">    The script is used two different ways.</span>
+
+<span class="sd">    1. Create unicorns.</span>
+<span class="sd">    2. Create rainbows.</span>
+
+<span class="sd">    .. IMPORTANT:: You must spawn a rainbow before creating unicorns or they will fall</span>
+<span class="sd">          to the ground without anything to stand on or fly over.</span>
+
+<span class="sd">    Developer(s)</span>
+<span class="sd">    ============</span>
+<span class="sd">    Rainbow Developer</span>
+
+<span class="sd">    Support Person(s)</span>
+<span class="sd">    =================</span>
+<span class="sd">    ============  ====================  ===========  ==========  ==========================</span>
+<span class="sd">      Priority         ame                Primary      Backup              Role</span>
+<span class="sd">    ------------  --------------------  -----------  ----------  --------------------------</span>
+<span class="sd">         1         Unicorn wrangler          X                     Application Programmer</span>
+<span class="sd">         2         Rainbow cleaner                        X        Database Editor</span>
+<span class="sd">    ============  ====================  ===========  ==========  ==========================</span>
+
+<span class="sd">    Users</span>
+<span class="sd">    ===================</span>
+<span class="sd">    ======================  ====================  ============================</span>
+<span class="sd">      Department              Contact Person               Use</span>
+<span class="sd">    ----------------------  --------------------  ----------------------------</span>
+<span class="sd">      Marketing              Sarah Sellsalot       Show the world the magic.</span>
+<span class="sd">      Finance                Payme Now             Collect the cash.</span>
+<span class="sd">      Development            Ova Workd             Spawn magic on demand.</span>
+<span class="sd">    ======================  ====================  ============================</span>
+
+<span class="sd">    Application Type</span>
+<span class="sd">    ================</span>
+<span class="sd">    Script</span>
+
+<span class="sd">    Language</span>
+<span class="sd">    ========</span>
+<span class="sd">    Python</span>
+
+<span class="sd">    Source Control Location</span>
+<span class="sd">    =======================</span>
+<span class="sd">    - \\\\localShare\\Development\\rainbowsUnicorns.py - Primary script - development version.</span>
+<span class="sd">    - \\\\serverShare\\Deployment\\rainbowsUnicorns.py - Primary script - deployment version.</span>
+<span class="sd">    - \\\\serverShare\\Deployment\\starDust.py - Globally used functions for all deployed modules.</span>
+<span class="sd">    - \\\\erverShare\\Deployment\\Log_Files:   Location of log files.</span>
+
+<span class="sd">    Deployment Technology</span>
+<span class="sd">    =====================</span>
+<span class="sd">    Script can be run using Pyscripter or Sublimetext. No installer required.</span>
+
+<span class="sd">    Deployment Location / Location of Installation Files</span>
+<span class="sd">    ====================================================</span>
+<span class="sd">    Same as Source Control Location. No media required.</span>
+
+<span class="sd">    Application Prerequisites</span>
+<span class="sd">    =========================</span>
+<span class="sd">    - Python version 2.7 required.</span>
+<span class="sd">    - Folder location of python.exe and python\\scripts folder needs to be</span>
+<span class="sd">      added to the Path of the system&#39;s Environment variables.</span>
+<span class="sd">    - Script has dependencies on modules from starDust.py in the Source Control</span>
+<span class="sd">       Location.</span>
+<span class="sd">    - The following Python modules must be installed on the system: pyodbc.</span>
+
+<span class="sd">    Installation Instructions / Issues</span>
+<span class="sd">    ==================================</span>
+<span class="sd">    Not Applicable</span>
+
+
+<span class="sd">    External Resources / Dependencies</span>
+<span class="sd">    =================================</span>
+<span class="sd">    None</span>
+
+<span class="sd">    Security</span>
+<span class="sd">    ========</span>
+<span class="sd">    Database access granted through database connection strings.</span>
+
+<span class="sd">    Reporting</span>
+<span class="sd">    =========</span>
+<span class="sd">    Script log file is created in \\\\erverShare\\Deployment\\Log_Files folder each time the script is run. Format is</span>
+<span class="sd">    rainbowsUnicorns_YYYYMMDD_HHMMSS.txt.</span>
+
+<span class="sd">    Development Prerequisites</span>
+<span class="sd">    =========================</span>
+<span class="sd">    None</span>
+
+<span class="sd">    Glossary</span>
+<span class="sd">    ========</span>
+<span class="sd">    .. _pyodbc connection: https://code.google.com/p/pyodbc/wiki/Connection</span>
+<span class="sd">    .. _pyodbc cursor: https://code.google.com/p/pyodbc/wiki/Cursor</span>
+
+<span class="sd">    Script Procedure Overview</span>
+<span class="sd">    =========================</span>
+<span class="sd">    - Python and starDust custom python modules imported.</span>
+<span class="sd">    - &#39;main()&#39; function called to execute the script and call the other</span>
+<span class="sd">      functions.</span>
+<span class="sd">    - Get the name of this file for use in log file.</span>
+<span class="sd">    - Set local variables.</span>
+<span class="sd">    - Create a log file.</span>
+<span class="sd">    - Count the number of unicorns and rainbows and add more to the world.</span>
+<span class="sd">    - Create more unicorns and rainbows as necessary.</span>
+
+<span class="sd">    Publisher</span>
+<span class="sd">    =========</span>
+<span class="sd">    Office of Unicorns and Rainbows</span>
+
+<span class="sd">    Created</span>
+<span class="sd">    =======</span>
+<span class="sd">    20150409</span>
+
+<span class="sd">    Last Revised</span>
+<span class="sd">    ============</span>
+<span class="sd">    20150410</span>
+
+<span class="sd">    Change Log / Release Notes</span>
+<span class="sd">    ==========================</span>
+<span class="sd">    +----------+-------------------------------------------------------------+</span>
+<span class="sd">    | YYYYMMDD |  DESCRIPTION                                                |</span>
+<span class="sd">    +==========+=============================================================+</span>
+<span class="sd">    | 20150410 | Increased quantity of rainbows spawned.                     |</span>
+<span class="sd">    +----------+-------------------------------------------------------------+</span>
+<span class="sd">    | 20150410 | Increased quantity of unicorns spawned.                     |</span>
+<span class="sd">    +----------+-------------------------------------------------------------+</span>
+
+<span class="sd">    Functions</span>
+<span class="sd">    =========</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c"># IMPORT NECESSARY PYTHON MODULES AND CUSTOM FUNCTIONS IN THE starDust MODULE</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">datetime</span> <span class="c"># Date and time modules.</span>
+    <span class="kn">import</span> <span class="nn">gc</span>       <span class="c"># Garbage collector.</span>
+    <span class="kn">import</span> <span class="nn">inspect</span>  <span class="c"># Need for inspection.</span>
+    <span class="kn">import</span> <span class="nn">os</span>       <span class="c"># Operating System Modules.</span>
+    <span class="kn">import</span> <span class="nn">random</span>   <span class="c"># Used to generate random numbers.</span>
+    <span class="kn">import</span> <span class="nn">sys</span>      <span class="c"># System module.</span>
+
+
+
+    <span class="c"># SET THE PYTHONDONTWRITEBYTECODE ENVIRONMENT VARIABLE</span>
+    <span class="c"># TO TRUE SO THAT IT WILL NOT CREATE COMPILED PYTHON (PYC) FILES</span>
+    <span class="c"># WHEN IMPORTING OTHER PY FILES.</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">dont_write_bytecode</span> <span class="o">=</span> <span class="bp">True</span>
+
+    <span class="c"># IMPORT starDust THAT CONTAINS CUSTOM FUNCTIONS</span>
+    <span class="c"># import starDust</span>
+
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;Import of modules failed. Exiting script.&quot;</span>
+    <span class="c"># EXIT SCRIPT</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+
+
+<span class="c"># ----------------------------------------------------------</span>
+<span class="c"># FUNCTION DEFINITION SECTION</span>
+<span class="c">#</span>
+<span class="c"># DEFINE MAJOR FUNCTIONS THAT ARE USED THROUGHOUT THE PROGRAM.</span>
+<span class="c">#</span>
+<span class="c"># ----------------------------------------------------------</span>
+<div class="viewcode-block" id="addUnicorn"><a class="viewcode-back" href="../index.html#rainbowsUnicorns.addUnicorn">[docs]</a><span class="k">def</span> <span class="nf">addUnicorn</span><span class="p">(</span><span class="n">currentCount</span><span class="p">,</span> <span class="n">numNeeded</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Print the number of unicorns in the world and then add more using the </span>
+<span class="sd">        quantity passed into the function.</span>
+
+<span class="sd">        Bacon ipsum dolor amet short loin strip steak landjaeger pastrami, alcatra fatback rump shoulder pork loin t-bone tail sirloin. Swine sausage beef pastrami porchetta shank kevin alcatra short ribs beef ribs. Boudin biltong rump kielbasa chuck turkey beef. Shoulder shankle chicken, leberkas filet mignon beef ribs frankfurter t-bone pork turkey ball tip pork chop jerky. Tenderloin pastrami tongue ground round spare ribs, venison ham swine pork chop fatback kevin pork tri-tip pig. T-bone tongue bresaola, pork chop landjaeger kielbasa jerky chicken ground round prosciutto alcatra shoulder ham.</span>
+
+<span class="sd">        .. WARNING:: You must spawn a rainbow before creating unicorns or they will fall</span>
+<span class="sd">          to the ground without anything to stand on or fly over.</span>
+
+<span class="sd">        :param numNeeded: The quantity of new unicorns to create.</span>
+<span class="sd">        :type numNeeded: int</span>
+<span class="sd">        :param happyMessage: Message to the user.</span>
+<span class="sd">        :type happyMessage: str     </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">happyMessage</span> <span class="o">=</span> <span class="s">&quot;You&#39;re so special because you created rainbows and unicorns.&quot;</span>
+
+        <span class="c"># Print the number of unicorns there are now and how many we&#39;ll create.</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;We have </span><span class="si">%s</span><span class="s"> unicorns shedding happiness on the world.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">currentCount</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;We&#39;re going to add </span><span class="si">%s</span><span class="s"> more!!&quot;</span> <span class="o">%</span> <span class="n">numNeeded</span><span class="p">)</span>
+        
+        <span class="c"># Loop through the quantity of unicorns needed</span>
+        <span class="c"># and create new ones.</span>
+        <span class="k">for</span> <span class="n">newUnicorn</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numNeeded</span><span class="p">):</span>
+          <span class="k">print</span><span class="p">(</span><span class="s">&quot;Creating a new unicorn.&quot;</span><span class="p">)</span>
+          <span class="k">print</span><span class="p">(</span><span class="s">&quot;We must create a rainbow first.&quot;</span><span class="p">)</span>
+          <span class="n">addRainbow</span><span class="p">()</span>
+          
+          <span class="c"># Increase unicorn count.</span>
+          <span class="n">currentCount</span> <span class="o">+=</span> <span class="mi">1</span>
+          <span class="k">print</span><span class="p">(</span><span class="s">&quot;We just created another 4 legged bundle of joy.</span><span class="se">\r\r</span><span class="s">&quot;</span><span class="p">)</span>
+
+        <span class="c"># Print totals and message.</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Now we have </span><span class="si">%s</span><span class="s"> unicorns.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">currentCount</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">happyMessage</span><span class="p">)</span>
+       
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;So sad, we had a problem creating the unicorn.&quot;</span><span class="p">)</span>
+
+
+</div>
+<div class="viewcode-block" id="addRainbow"><a class="viewcode-back" href="../index.html#rainbowsUnicorns.addRainbow">[docs]</a><span class="k">def</span> <span class="nf">addRainbow</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot; Add more rainbows to the world.</span>
+
+<span class="sd">        :param numRainbows: Random quantity between 1 and 15 of new rainbows to create.</span>
+<span class="sd">        :type numRainbows: int</span>
+<span class="sd">        :param happyMessage: Message to the user.</span>
+<span class="sd">        :type DBConn: str </span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c"># Set the number of rainbows to create.</span>
+        <span class="n">numRainbows</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;There are never enough rainbows! :)&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">&quot;We just made </span><span class="si">%s</span><span class="s"> more!!&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">numRainbows</span><span class="p">))</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">&quot;Done making the world a better place.&quot;</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">&quot;We had a problem making the rainbow. We&#39;re out of magic.&quot;</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Something is terribly wrong in the world. We failed creating a rainbow.  :(&quot;</span><span class="p">)</span> 
+        <span class="c"># GARBAGE COLLECT VARIABLES</span>
+        <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+        <span class="c"># EXIT SCRIPT</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+    <span class="k">pass</span>
+
+</div>
+<div class="viewcode-block" id="setVariables"><a class="viewcode-back" href="../index.html#rainbowsUnicorns.setVariables">[docs]</a><span class="k">def</span> <span class="nf">setVariables</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot; Sets the variables used throughout the program.</span>
+
+<span class="sd">        .. NOTE:: Many variables are imported from :py:func:`starDust`.</span>
+
+<span class="sd">        :param scriptDescription: Task that this script completes.</span>
+<span class="sd">        :type scriptDescription: str</span>
+<span class="sd">        :param textLog: Name of the log file to document this script.</span>
+<span class="sd">        :type textLog: str</span>
+<span class="sd">        :param thisFilesName: Name of the module that is currently running.</span>
+<span class="sd">        :type thisFilesName: str</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Create variables.</span><span class="se">\r\r</span><span class="s">&quot;</span><span class="p">)</span>        
+
+        <span class="k">global</span> <span class="n">scriptDescription</span>
+        <span class="n">scriptDescription</span> <span class="o">=</span> <span class="s">&quot;We are working to make the world a better place.&quot;</span>
+
+        <span class="c"># USE THE CURRENT SCRIPT&#39;S NAME, WITH THE .PY SLICED FROM THE END,</span>
+        <span class="c"># THEN ADD THE DATE AND USE AS THE LOG FILES NAME.</span>
+        <span class="k">global</span> <span class="n">textLog</span>
+        <span class="n">textLog</span> <span class="o">=</span> <span class="n">thisFilesName</span><span class="p">[:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="s">&quot;_&quot;</span> <span class="o">+</span> <span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">&quot;%Y%m</span><span class="si">%d</span><span class="s">_%H%M%S&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;.txt&quot;</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;Error initializing variables - Exiting script.&quot;</span><span class="p">)</span>
+        <span class="c"># GARBAGE COLLECT VARIABLES</span>
+        <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+        <span class="c"># EXIT SCRIPT</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+    <span class="k">pass</span>
+
+
+</div>
+<div class="viewcode-block" id="main"><a class="viewcode-back" href="../index.html#rainbowsUnicorns.main">[docs]</a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot; Primary function that calls all the other functions to execute</span>
+<span class="sd">        the program.</span>
+
+<span class="sd">        :param thisFilesName: Name of the module that is currently running.</span>
+<span class="sd">            Obtained by inspection of the current frame.</span>
+<span class="sd">        :type thisFilesName: str</span>
+
+<span class="sd">        :param currentUnicornCount: Quantity of unicorns that currently exist.</span>
+<span class="sd">        :type currentUnicornCount: int</span>
+<span class="sd">        :param newUnicornsNeeded: Random quantity between 1 and 55 of new unicorns to create.</span>
+<span class="sd">        :type newUnicornsNeeded: int</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c"># Get the filename of this script.</span>
+    <span class="k">global</span> <span class="n">thisFilesName</span>
+    <span class="n">thisFilesName</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">getfile</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">currentframe</span><span class="p">()))</span>
+
+    <span class="k">print</span> <span class="s">&quot;Setting local variables... -- setVariables function.&quot;</span>
+    <span class="n">setVariables</span><span class="p">()</span>
+
+    <span class="c"># Set unicorn parameters.</span>
+    <span class="n">currentUnicornCount</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">newUnicornsNeeded</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+
+    <span class="c"># Create some unicorns.</span>
+    <span class="n">addUnicorn</span><span class="p">(</span><span class="n">currentUnicornCount</span><span class="p">,</span> <span class="n">newUnicornsNeeded</span><span class="p">)</span>
+
+    <span class="k">print</span> <span class="s">&quot;</span><span class="se">\r</span><span class="s">&quot;</span>
+    <span class="c">#  GARBAGE COLLECT VARIABLES</span>
+    <span class="n">gc</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
+    <span class="k">print</span> <span class="s">&quot;SCRIPT FINISHED.&quot;</span>
+
+</div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="c"># CALL THE MAIN FUNCTION</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Sample Script 1.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Sample Programmer.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.
+    </div>
+  </body>
+</html>
